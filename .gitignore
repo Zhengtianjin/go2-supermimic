@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+._*
+.DS_Store
+
+# Run outputs
+logs/
+videos/
+checkpoints/
+*.pt
+!weights/*.pt
+*.mp4

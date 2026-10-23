@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "go2-supermimic"
+version = "0.1.0"
+description = "Unitree Go2 chasing and dodging with SuperMimic model-based RL in mjlab"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Ziyue Zheng", email = "zzheng60@jh.edu" }]
+requires-python = ">=3.10"
+dependencies = [
+  "mjlab>=1.6.0",
+  "torch",
+  "matplotlib",
+  "mediapy",
+  "pillow",
+  "tensorboard",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["go2_supermimic*"]
+
+[tool.setuptools.package-data]
+go2_supermimic = ["robot/go2.xml", "robot/assets/*.obj", "robot/LICENSE_menagerie_go2"]
